@@ -10,9 +10,11 @@ exports.postUser = async (req, res) => {
     }
 }
 exports.getUsers = async (req, res) => {
+
+    //res.status(200).send({"user":"Abhishek"});
     try {
-        const users = await User.find({})
-        res.send(users)
+        //const users = await User.find({})
+        res.status(200).send({"test":"passed"});
     } catch (e) {
         res.status(500).send()
     }
